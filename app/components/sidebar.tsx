@@ -10,7 +10,6 @@ import {
   Menu,
 } from "lucide-react";
 
-
 const Sidebar = () => {
   return (
     <div className="w-64 border-r border-gray-100 h-screen bg-white text-black p-4 flex flex-col justify-between">
@@ -20,7 +19,6 @@ const Sidebar = () => {
           <Menu size={20} />
         </button>
       </div>
-
 
       <nav className="md:-mt-16 side-adjust -mt-72 pl-2 space-y-6">
         {[
@@ -33,8 +31,13 @@ const Sidebar = () => {
         ].map(({ icon: Icon, text }, index) => (
           <div key={index}>
             {Icon === Home ? (
-              <a href="#" className="flex items-center space-x-3">
-                <div className="rounded-2xl bg-blue-100 p-2">
+              <a
+                href="#"
+                className="flex items-center space-x-3 p-2 relative -left-2 hover:text-black"
+              >
+                <span className="absolute -left-4 h-8 w-1 bg-blue-500 rounded"></span>
+
+                <div className="rounded-2xl bg-blue-100 p-2 flex">
                   <Home className="text-blue-400" size={22} />
                 </div>
                 <span className="text-sm -ml-1">Home</span>
@@ -42,7 +45,9 @@ const Sidebar = () => {
             ) : (
               <a
                 href="#"
-                className="flex items-center space-x-3 p-2 hover:text-black"
+                className={`flex items-center space-x-3 p-2  hover:text-black ${
+                  (index + 1) % 3 === 0 ? "border-b border-b-gray-100 pb-4" : ""
+                }`}
               >
                 <Icon className="text-gray-500" size={22} />
                 <span className="text-sm">{text}</span>
@@ -51,7 +56,6 @@ const Sidebar = () => {
           </div>
         ))}
       </nav>
-
 
       <div className="flex border-t border-gray-100 pt-2 items-center justify-between mt-8">
         <div className="flex items-center space-x-3">

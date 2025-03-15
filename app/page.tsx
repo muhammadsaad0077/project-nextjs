@@ -16,14 +16,14 @@ export default function Home() {
       </div>
 
       {/* Sidebar Toggle for Mobile */}
-
-      <button
-        onClick={() => setSidebarOpen(!isSidebarOpen)}
-        className="absolute top-3 left-24 md:hidden p-2 rounded-md z-50"
-      >
-        ☰
-      </button>
-
+      {!isSidebarOpen && (
+        <button
+          onClick={() => setSidebarOpen(!isSidebarOpen)}
+          className="absolute top-3 left-24 md:hidden p-2 rounded-md z-50"
+        >
+          ☰
+        </button>
+      )}
       {/* Responsive Sidebar */}
 
       {isSidebarOpen && (

@@ -31,8 +31,27 @@ body {
   }
 }
 
- @media (min-width: 100px) and (max-width: 550px) {
+
+@media (max-width: 639px) {  
   .side-adjust {
-      margin-top: -50px;
-  }
-} 
+    margin-top: -220px;
+}  
+}
+
+/* Tablets */
+@media (min-width: 640px) and (max-width: 1023px) {  
+  .side-adjust {
+    margin-top: -300px;
+}  
+}
+
+/* Laptops */
+@media (min-width: 1024px) and (max-width: 1279px) {  
+  .side-adjust {
+    margin-top: 30px;
+}  
+}
+
+button{
+  cursor: pointer;
+}
