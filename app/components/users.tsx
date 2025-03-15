@@ -11,8 +11,8 @@ const users = [
 
 const Users = () => {
   return (
-    <div className="p-4 pb-8 pr-6 pl-6 relative  rounded-lg -left-10 w-[200%] max-w-sm mx-auto">
-      <div className="absolute -top-5 left-0 h-[100vh] w-[1px] bg-gray-100"></div>
+    <div className="p-4 pb-8 pr-6 pl-6 relative width-adjust rounded-lg lg:w-[200%] md:w-[200%] -left-10 max-w-sm mx-auto">
+      <div className="absolute -top-5 left-0 h-[100vh] w-[1px] bg-gray-50"></div>
       <div className="relative mb-4">
         <input
           type="text"

@@ -13,16 +13,16 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="w-64 border-r border-r-gray-100 h-screen bg-white text-black p-4 flex flex-col justify-between">
+    <div className="w-64 border-r border-gray-100 h-screen bg-white text-black p-4 flex flex-col justify-between">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">FLEKT</h1>
-        <button className="p-2 rounded-2xl bg-gray-100 text-gray-800 md:inline-block hidden">
+        <button className="p-2 relative -left-2 rounded-2xl bg-gray-100 text-gray-800 md:inline-block hidden">
           <Menu size={20} />
         </button>
       </div>
 
 
-      <nav className="md:-mt-16 -mt-72 pl-2 space-y-6">
+      <nav className="md:-mt-16 side-adjust -mt-72 pl-2 space-y-6">
         {[
           { icon: Home, text: "Home" },
           { icon: Search, text: "Explore" },
@@ -37,7 +37,7 @@ const Sidebar = () => {
                 <div className="rounded-2xl bg-blue-100 p-2">
                   <Home className="text-blue-400" size={22} />
                 </div>
-                <span className="text-sm">Home</span>
+                <span className="text-sm -ml-1">Home</span>
               </a>
             ) : (
               <a
@@ -53,7 +53,7 @@ const Sidebar = () => {
       </nav>
 
 
-      <div className="flex items-center justify-between mt-8">
+      <div className="flex border-t border-gray-100 pt-2 items-center justify-between mt-8">
         <div className="flex items-center space-x-3">
           <img
             src="https://i.pravatar.cc/40"

@@ -11,7 +11,7 @@ import {
 
 const Feed = () => {
   return (
-    <div className="flex flex-col w-full lg:w-[75%] mt-0 md:mt-6 ml-0 lg:ml-20">
+    <div className="flex flex-col w-full lg:w-[83%] mt-0 md:mt-4 ml-0 lg:ml-[56px]">
       <div className="flex justify-between items-center flex-wrap">
         <h1 className="text-2xl font-semibold">Home</h1>
         <div className="flex gap-4">
@@ -25,11 +25,11 @@ const Feed = () => {
       </div>
 
 
-      <div className="bg-white border text-[5px] border-gray-100 rounded-lg mt-4 p-4">
+      <div className="bg-white border text-[4px] border-gray-100 rounded-lg mt-4 p-2">
         <input
           type="text"
           placeholder="What is happening?!"
-          className="w-full p-3 placeholder:text-sm border-b border-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="w-full p-3 text-[12px] rounded-md placeholder:text-sm border-b border-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200"
         />
         <div className="flex flex-wrap justify-between items-center mt-3">
           <div className="flex space-x-4">
@@ -37,13 +37,13 @@ const Feed = () => {
               <div className="bg-blue-100 p-2 rounded-2xl">
                 <Image size={16} className="text-blue-400" />
               </div>
-              <span className="text-[10px]">Add Image</span>
+              <span className="text-[10px] font-semibold">Add Image</span>
             </button>
             <button className="flex items-center space-x-2 p-2 rounded-lg">
               <div className="bg-blue-100 p-2 rounded-2xl">
                 <Plus size={16} className="text-blue-500" />
               </div>
-              <span className="text-[10px]">Add Auction</span>
+              <span className="text-[10px] font-semibold">Add Auction</span>
             </button>
           </div>
           <button className="px-4 py-2 bg-blue-400 text-white text-[12px] rounded-2xl">
@@ -53,13 +53,14 @@ const Feed = () => {
       </div>
 
 
-      <div className="bg-white border border-gray-100 pb-5 p-4 rounded-lg mt-4">
+      <div className="bg-white border border-gray-100 pb-5 p-3 rounded-lg mt-3">
+       <div>
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img
               src="https://i.pravatar.cc/40"
               alt="User"
-              className="w-10 h-10 rounded-full"
+              className="w-8 h-8 rounded-full"
             />
             <div>
               <h3 className="text-[10px] font-semibold">Emmanuel Lemelson</h3>
@@ -72,18 +73,18 @@ const Feed = () => {
         </div>
 
         <div className="mt-3">
-          <h2 className="md:text-[15px] text=[11px] font-semibold">
+          <h2 className="md:text-[18px] text-[11px]">
             The Pinnacle of Luxury: Magnificent Private Estate Nestled In
             <br />
             Picturesque Stowe
           </h2>
-          <p className="text-gray-600  text-[12px] font-sans mt-2">
+          <p className="text-gray-600  text-[15px] font-sans mt-2">
             Vacations are the golden threads that weave together the tapestry of
             our lives, and “Eden” (The Lemelson Estate) in Vermont is the canvas
             where unforgettable memories come to
-            life. Nestled within 28 acres of breathtaking beauty, this
+            life. Nestled<br /> within 28 acres of breathtaking beauty, this
             maginficinet mountain estate
-             invites you to ambrace adventure and connection.
+             invites you to<br /> ambrace adventure and connection.
           </p>
         </div>
 
@@ -99,7 +100,7 @@ const Feed = () => {
               key={index}
               src={src}
               alt="House"
-              className="rounded-2xl w-[110px] object-cover h-[110px]"
+              className="rounded-2xl w-[154px] object-cover h-[118px]"
             />
           ))}
         </div>
@@ -145,6 +146,7 @@ const Feed = () => {
           <button className="bg-gray-100 text-gray-800 py-[3px] text-[12px] px-4 rounded-full border border-transparent shadow-sm transition">
             Place Bid
           </button>
+        </div>
         </div>
       </div>
     </div>
